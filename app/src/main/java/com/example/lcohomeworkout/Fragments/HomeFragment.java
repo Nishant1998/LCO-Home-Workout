@@ -38,6 +38,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private NumberPicker numberPicker;
     private int numberOfSets;
 
+    private Button i1;
+    private Button s1;
+
     private TextView cd01_0,cd01_1;
 
     private static final String SHARED = "WORKOUT_SHARED_DATA";
@@ -65,16 +68,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         editor.putInt(NUMBER_OF_SETS,1);
         editor.apply();
 
+        init();
 
-        c1 = getView().findViewById(R.id.execard01);
-        bottomNavigationView = getView().findViewById(R.id.bottom_navigation);
-
-        //find textview of cards
-        cd01_0 = getView().findViewById(R.id.execard01_mincount);
-        cd01_1 = getView().findViewById(R.id.execard01_setscount);
 
 
         c1.setOnClickListener(this);
+        i1.setOnClickListener(this);
+        s1.setOnClickListener(this);
 
 
         //Ask for number of sets to perform
@@ -112,10 +112,25 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     }
 
+    private void init() {
+        c1 = getView().findViewById(R.id.execard01);
+        bottomNavigationView = getView().findViewById(R.id.bottom_navigation);
+
+        //find textview of cards
+        cd01_0 = getView().findViewById(R.id.execard01_mincount);
+        cd01_1 = getView().findViewById(R.id.execard01_setscount);
+
+        //instruction
+        i1 = getView().findViewById(R.id.instruction_01);
+
+        //start
+        s1 = getView().findViewById(R.id.start_01);
+    }
+
     private void showSetsAndTime() {
         SharedPreferences mySharedPreference = getActivity().getSharedPreferences(SHARED,MODE_PRIVATE);
-        int setnum = mySharedPreference.getInt(NUMBER_OF_SETS,0);
-
+        int setnum = mySharedPreference.getInt(NUMBER_OF_SETS,1);
+        if(setnum == 0) setnum = 1;
 
         cd01_0.setText(Integer.toString(2*setnum));
         cd01_1.setText("" + setnum);
@@ -173,6 +188,29 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 //                    startActivity(intent);
             }
             break;
+
+            case R.id.instruction_01:{display_instruction();}
+            break;
         }
+    }
+
+    public void display_instruction()
+    {
+
+        dialog = new Dialog(getContext());
+        dialog.setContentView(R.layout.layout_custom_dialog_instruction);
+
+        ok = dialog.findViewById(R.id.button_instruction_ok);
+
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+
+        dialog.show();
+
     }
 }

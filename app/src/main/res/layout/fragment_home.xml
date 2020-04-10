@@ -238,6 +238,7 @@
                                 android:background="@drawable/design_btn_02"
                                 android:text="@string/instructions"
                                 android:textColor="@color/colorPrimary"
+                                android:onClick="display_instruction"
                                 android:textSize="18sp" />
 
                         </LinearLayout>
