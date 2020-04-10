@@ -10,4 +10,14 @@
     <string name="drawer_nav_open">open</string>
     <string name="drawer_nav_close">close</string>
     <string name="pushups">Pushups</string>
+
+
+    <string name="title_activity_exercise">Exercise</string>
+    <string name="start">START</string>
+    <string name="start_small">Start</string>
+    <string name="instructions">INSTRUCTIONS</string>
+    <string name="sets">Sets</string>
+    <string name="random">Random</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
 </resources>

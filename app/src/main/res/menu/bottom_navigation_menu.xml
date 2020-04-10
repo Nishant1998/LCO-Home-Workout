@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_nav_start"
+        android:title="@string/start_small"
+        android:icon="@drawable/ic_play"/>
+    <item
+        android:id="@+id/bottom_nav_sets"
+        android:title="@string/sets"
+        android:icon="@drawable/ic_count"/>
+    <item
+        android:id="@+id/bottom_nav_random"
+        android:title="@string/random"
+        android:icon="@drawable/ic_random"/>
+
+</menu>
