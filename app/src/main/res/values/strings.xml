@@ -20,4 +20,7 @@
     <string name="random">Random</string>
     <string name="ok">OK</string>
     <string name="cancel">CANCEL</string>
+    <string name="readyToGo">Ready to start !!</string>
+    <string name="exe1">Push-ups</string>
+    <string name="breaks">Break !!</string>
 </resources>

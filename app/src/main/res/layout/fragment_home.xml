@@ -57,6 +57,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/workout_goal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="0"
@@ -80,6 +81,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/kcal_goal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="0"
@@ -103,6 +105,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/min_goal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="0"
@@ -138,12 +141,14 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
+            <!--1Pushups-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/execard01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:onClick="onClick"
+                android:visibility="gone"
                 app:cardCornerRadius="10dp">
 
                 <LinearLayout
@@ -167,7 +172,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
-                            android:text="Push-ups"
+                            android:text="@string/exe1"
                             android:textColor="@android:color/black"
                             android:textSize="24sp" />
 
@@ -182,16 +187,30 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto"
-                                android:text="4"
+                                android:text="00"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text=":"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/execard01_seccount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
                                 android:layout_marginRight="4dp"
                                 android:textSize="14sp" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/roboto"
-                                android:text="min"
+                                android:text="Time"
                                 android:layout_marginRight="16dp"
                                 android:textSize="14sp" />
+
                             <TextView
                                 android:id="@+id/execard01_setscount"
                                 android:layout_width="wrap_content"
@@ -221,24 +240,22 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <Button
-                                android:id="@+id/start_01"
-                                android:layout_width="87dp"
-                                android:layout_height="33dp"
-                                android:background="@drawable/design_btn_01"
-                                android:text="@string/start"
-                                android:textColor="#FFFFFF"
-                                android:textSize="18sp" />
+<!--                            <Button-->
+<!--                                android:id="@+id/start_01"-->
+<!--                                android:layout_width="87dp"-->
+<!--                                android:layout_height="33dp"-->
+<!--                                android:background="@drawable/design_btn_01"-->
+<!--                                android:text="@string/start"-->
+<!--                                android:textColor="#FFFFFF"-->
+<!--                                android:textSize="18sp" />-->
 
                             <Button
                                 android:id="@+id/instruction_01"
-                                android:layout_marginLeft="8dp"
                                 android:layout_width="140dp"
                                 android:layout_height="33dp"
-                                android:background="@drawable/design_btn_02"
+                                android:background="@drawable/design_btn_01"
                                 android:text="@string/instructions"
-                                android:textColor="@color/colorPrimary"
-                                android:onClick="display_instruction"
+                                android:textColor="#FFFFFF"
                                 android:textSize="18sp" />
 
                         </LinearLayout>
@@ -253,57 +270,13 @@
 
             </androidx.cardview.widget.CardView>
 
+            <!--2Crunches-->
             <androidx.cardview.widget.CardView
+                android:id="@+id/execard02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_margin="8dp"
-                app:cardCornerRadius="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="194dp"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/img2" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/roboto"
-                            android:text="Push-ups"
-                            android:textColor="@android:color/black"
-                            android:textSize="24sp" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/roboto"
-                            android:text="4 mins - 2sets"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_margin="8dp"
+                android:visibility="gone"
                 app:cardCornerRadius="10dp">
 
                 <LinearLayout
@@ -315,7 +288,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="194dp"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/img3" />
+                        app:srcCompat="@drawable/img2" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -327,23 +300,889 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
-                            android:text="Push-ups"
+                            android:text="Crunches"
                             android:textColor="@android:color/black"
                             android:textSize="24sp" />
 
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/execard02_mincount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text=":"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/execard02_seccount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
+                                android:layout_marginRight="4dp"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Time"
+                                android:layout_marginRight="16dp"
+                                android:textSize="14sp" />
+
+
+                            <TextView
+                                android:id="@+id/execard02_setscount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="4"
+                                android:layout_marginRight="4dp"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="sets"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@android:color/darker_gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+<!--                            <Button-->
+<!--                                android:id="@+id/start_01"-->
+<!--                                android:layout_width="87dp"-->
+<!--                                android:layout_height="33dp"-->
+<!--                                android:background="@drawable/design_btn_01"-->
+<!--                                android:text="@string/start"-->
+<!--                                android:textColor="#FFFFFF"-->
+<!--                                android:textSize="18sp" />-->
+
+                            <Button
+                                android:id="@+id/instruction_02"
+                                android:layout_width="140dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/design_btn_01"
+                                android:text="@string/instructions"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--3Renegade row-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/execard03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="194dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/img6" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto"
-                            android:text="4 mins - 2sets"
-                            android:textSize="14sp" />
+                            android:text="Renegade row"
+                            android:textColor="@android:color/black"
+                            android:textSize="24sp" />
 
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/execard03_mincount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text=":"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/execard03_seccount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
+                                android:layout_marginRight="4dp"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Time"
+                                android:layout_marginRight="16dp"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/execard03_setscount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="4"
+                                android:layout_marginRight="4dp"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="sets"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@android:color/darker_gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/instruction_03"
+                                android:layout_width="140dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/design_btn_01"
+                                android:text="@string/instructions"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
                     </LinearLayout>
-
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
+
+            <!--4 STANDING DUMBBELL CURL-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/execard04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="194dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/img7" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Standing Dumbbell Curl"
+                            android:textColor="@android:color/black"
+                            android:textSize="24sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/execard04_mincount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text=":"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/execard04_seccount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
+                                android:layout_marginRight="4dp"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Time"
+                                android:layout_marginRight="16dp"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/execard04_setscount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="4"
+                                android:layout_marginRight="4dp"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="sets"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@android:color/darker_gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/instruction_04"
+                                android:layout_width="140dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/design_btn_01"
+                                android:text="@string/instructions"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--5 swiss Ball Decline Push-Up-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/execard05"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="194dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/img8" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Swiss Ball Decline Push-Up"
+                            android:textColor="@android:color/black"
+                            android:textSize="24sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/execard05_mincount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text=":"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/execard05_seccount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
+                                android:layout_marginRight="4dp"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Time"
+                                android:layout_marginRight="16dp"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/execard05_setscount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="4"
+                                android:layout_marginRight="4dp"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="sets"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@android:color/darker_gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/instruction_05"
+                                android:layout_width="140dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/design_btn_01"
+                                android:text="@string/instructions"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--6 vrksasana-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/execard06"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="194dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/img9" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Vrksasana"
+                            android:textColor="@android:color/black"
+                            android:textSize="24sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/execard06_mincount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text=":"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/execard06_seccount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
+                                android:layout_marginRight="4dp"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Time"
+                                android:layout_marginRight="16dp"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/execard06_setscount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="4"
+                                android:layout_marginRight="4dp"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="sets"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@android:color/darker_gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/instruction_06"
+                                android:layout_width="140dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/design_btn_01"
+                                android:text="@string/instructions"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--7 Rowing-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/execard07"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="194dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/img10" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Rowing"
+                            android:textColor="@android:color/black"
+                            android:textSize="24sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/execard07_mincount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text=":"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/execard07_seccount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
+                                android:layout_marginRight="4dp"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Time"
+                                android:layout_marginRight="16dp"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/execard07_setscount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="4"
+                                android:layout_marginRight="4dp"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="sets"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@android:color/darker_gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/instruction_07"
+                                android:layout_width="140dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/design_btn_01"
+                                android:text="@string/instructions"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--8 Incline bp-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/execard08"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="194dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/img11" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Incline Bench Press"
+                            android:textColor="@android:color/black"
+                            android:textSize="24sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/execard08_mincount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text=":"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/execard08_seccount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
+                                android:layout_marginRight="4dp"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Time"
+                                android:layout_marginRight="16dp"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/execard08_setscount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="4"
+                                android:layout_marginRight="4dp"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="sets"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@android:color/darker_gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/instruction_08"
+                                android:layout_width="140dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/design_btn_01"
+                                android:text="@string/instructions"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--9 Bench Press-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/execard09"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:visibility="gone"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="194dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/img12" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Bench Press"
+                            android:textColor="@android:color/black"
+                            android:textSize="24sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/execard09_mincount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text=":"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:id="@+id/execard09_seccount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="00"
+                                android:layout_marginRight="4dp"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Time"
+                                android:layout_marginRight="16dp"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/execard09_setscount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="4"
+                                android:layout_marginRight="4dp"
+                                android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="sets"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@android:color/darker_gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/instruction_09"
+                                android:layout_width="140dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/design_btn_01"
+                                android:text="@string/instructions"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
 
 
         </LinearLayout>

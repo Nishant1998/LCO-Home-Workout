@@ -1,6 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/app_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/exercise_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+
+        <TextView
+            android:id="@+id/exercise_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/exercise_left_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:text="Push-ups"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="28dp" />
+
+        <TextView
+            android:id="@+id/exercise_left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/exercise_imageview"
+            android:layout_marginBottom="60dp"
+            android:text="3/5"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/sets_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/exercise_imageview"
+            android:layout_marginBottom="30dp"
+            android:text="set 1/5"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <ImageView
+
+            android:id="@+id/exercise_imageview"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/img1"/>
+
+
+        <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+            android:id="@+id/progressBar_exercise"
+            style="@style/Widget.MaterialProgressBar.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"
+            android:indeterminate="false"
+            android:minWidth="100dp"
+            android:minHeight="100dp"
+            app:mpb_progressBackgroundTint="@color/colorPrimaryLight"
+            app:mpb_progressTint="@color/colorPrimary"
+            app:mpb_showProgressBackground="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/exercise_countdown_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/progressBar_exercise"
+            android:layout_alignBottom="@+id/progressBar_exercise"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="33dp"
+            android:text="00:00"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
 
 </RelativeLayout>
