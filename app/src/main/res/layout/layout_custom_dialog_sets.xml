@@ -32,6 +32,9 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@drawable/design_btn_01"
             android:text="OK"/>
 
 
@@ -39,6 +42,9 @@
             android:id="@+id/button_sets_cancel"
             android:layout_weight="1"
             android:layout_width="0dp"
+            android:background="@drawable/design_btn_02"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
             android:layout_height="wrap_content"
             android:text="CANCEL"/>
 

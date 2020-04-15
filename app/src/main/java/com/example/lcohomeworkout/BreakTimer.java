@@ -79,6 +79,8 @@ public class BreakTimer extends AppCompatActivity {
         {
             RelativeLayout r = findViewById(R.id.timer_relative_layout);
             r.setVisibility(View.GONE);
+            RelativeLayout s = findViewById(R.id.finished_relative_layout);
+            s.setVisibility(View.VISIBLE);
         }
 
 
