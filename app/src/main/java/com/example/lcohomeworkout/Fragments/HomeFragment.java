@@ -122,9 +122,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
                         Bundle bundle = new Bundle();
                         bundle.putInt("timerType",0);
-
                         bundle.putIntegerArrayList("List",list);
-
+                        bundle.putInt("NumOfExe",set.size());
                         Intent intent = new Intent(getActivity(), BreakTimer.class);
                         intent.putExtras(bundle);
                         startActivity(intent);
