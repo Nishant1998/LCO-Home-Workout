@@ -11,7 +11,7 @@
         android:icon="@drawable/ic_count"/>
     <item
         android:id="@+id/bottom_nav_random"
-        android:title="@string/random"
+        android:title="@string/refresh"
         android:icon="@drawable/ic_random"/>
 
 </menu>

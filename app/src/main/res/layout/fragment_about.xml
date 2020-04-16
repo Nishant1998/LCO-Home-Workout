@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    tools:context=".Fragments.AboutFragment">
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/photo"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:id="@+id/msg"
+    android:layout_below="@id/photo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/msg"
+    android:layout_margin="20dp"
+    android:textColor="@color/black"
+    android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/msg2"
+        android:layout_below="@id/msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/msg2"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+
+        <LinearLayout
+            android:id="@+id/linkToChallenge"
+            android:layout_below="@id/msg2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/youtube"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/youtube_red"
+                android:text="@string/link_to_challenge"/>
+
+        </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

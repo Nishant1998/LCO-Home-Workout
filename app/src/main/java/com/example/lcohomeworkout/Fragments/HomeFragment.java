@@ -307,7 +307,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         cd08_1.setText("" + setnum);
         cd09_1.setText("" + setnum);
 
-        //TODO UPDATE TODAYS GOAL
+
         updateGoals(set);
     }
 
@@ -322,47 +322,47 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         workout.setText("" + set.size());
         int k = 0, sec = 0;
         if (set.contains(1)) {
-            k += 0;
+            k += 10;
             sec += 50;
             Log.d("INFO", "1:" + sec);
         }
         if (set.contains(2)) {
-            k += 0;
+            k += 20;
             sec += 65;
             Log.d("INFO", "2:" + sec);
         }
         if (set.contains(3)) {
-            k += 0;
+            k += 15;
             sec += 95;
             Log.d("INFO", "3:" + sec);
         }
         if (set.contains(4)) {
-            k += 0;
+            k += 5;
             sec += 100;
             Log.d("INFO", "4:" + sec);
         }
         if (set.contains(5)) {
-            k += 0;
+            k += 6;
             sec += 70;
             Log.d("INFO", "5:" + sec);
         }
         if (set.contains(6)) {
-            k += 0;
+            k += 22;
             sec += 65;
             Log.d("INFO", "6:" + sec);
         }
         if (set.contains(7)) {
-            k += 0;
+            k += 25;
             sec += 120;
             Log.d("INFO", "7:" + sec);
         }
         if (set.contains(8)) {
-            k += 0;
+            k += 30;
             sec += 150;
             Log.d("INFO", "8:" + sec);
         }
         if (set.contains(9)) {
-            k += 0;
+            k += 50;
             sec += 150;
             Log.d("INFO", "9:" + sec);
         }

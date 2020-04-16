@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.lcohomeworkout.Fragments.AboutFragment;
 import com.example.lcohomeworkout.Fragments.HomeFragment;
 import com.google.android.material.navigation.NavigationView;
 
@@ -53,11 +54,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.nav_home) {
             showFragment(new HomeFragment());
         }
-//         else if (id == R.id.nav_unit_converter) {
-//            showFragment(new unitConverterFragment());
-//        } else if (id == R.id.nav_currency_converter) {
-//            showFragment(new currencyConverterFragment());
-//        }
+        else if(id == R.id.nav_about)
+        {
+            showFragment(new AboutFragment());
+        }
+
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

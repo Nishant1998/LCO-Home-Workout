@@ -5,7 +5,7 @@
     <string name="nav_settings">Settings</string>
     <string name="nav_about">About</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="drawer_nav_open">open</string>
     <string name="drawer_nav_close">close</string>
@@ -23,4 +23,8 @@
     <string name="readyToGo">Ready to start !!</string>
     <string name="exe1">Push-ups</string>
     <string name="breaks">Break !!</string>
+    <string name="refresh">Refresh</string>
+    <string name="msg">Hi, I am Nishant Valvi, Computer Engineering student from Maharashtra. I have started learning android development from last 4 to 5 months ago. I have developed app as an challenge from Histesh Chaoudhary Sir. The app have taken almost 18hrs to build and I would like to charge $100 for this app.</string>
+    <string name="msg2">Thanks for this challenge, I learn a lot from this.</string>
+    <string name="link_to_challenge">Link to challenge</string>
 </resources>
